@@ -47,7 +47,7 @@ assert re.match(phone_num, s3)[0] == '415-630-2119'
 assert re.findall(phone_num, s3) == ['415-630-2119', '415-630-2001']
 
 ##What about for dates?
-date_re = r'\d{4}-\d{2}-\d{2}' ##What is the regular expression for this?
+date_re = r'\d{3}-\d{3}-\d{4}' ##What is the regular expression for this?
 
 date = '2022-08-12'
 

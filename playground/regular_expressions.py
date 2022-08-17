@@ -25,6 +25,10 @@ to find phone numbers in the following three sentences s1, s2, s3.
 >>> assert re.match(phone_num, s3)[0] == '415-630-2119' 
 >>> assert re.findall(phone_num, s3) == ['415-630-2119', '415-630-2001']
 
+>>> !ls temp
+
+>>> !echo hello
+hello
 '''
 import regex as re
 # Write your code here:

@@ -26,8 +26,9 @@ to find phone numbers in the following three sentences s1, s2, s3.
 >>> assert re.findall(phone_num, s3) == ['415-630-2119', '415-630-2001']
 
 '''
-import regex as re
-# Write your code here:
+import regex as re ##regex is more newer, pip install
+
+# Write your code here: add functions here
 #re.search(regular_expression, string)
 phone_num =  r'\d{3}-\d{3}-\d{4}'
 s1 = "This sentence contains a phone number (415-630-2001)."
@@ -47,7 +48,7 @@ assert re.match(phone_num, s3)[0] == '415-630-2119'
 assert re.findall(phone_num, s3) == ['415-630-2119', '415-630-2001']
 
 ##What about for dates?
-regular_expression = r'\d{3}-\d{3}-\d{4}' ##What is the regular expression for this? How can we change the expression from finding phone numbers to finding date?
+regular_expression = r'\d{4}-\d{2}-\d{2}' ##What is the regular expression for this? How can we change the expression from finding phone numbers to finding date?
 
 date = '2022-08-12'
 

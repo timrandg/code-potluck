@@ -23,3 +23,27 @@ def test_yolo_prints_yolo_based_on_count_flag_respects_default(c,t):
     output = subprocess.check_output(cmd, shell=True).decode()
     assert output == 'yolo\n' * t
 
+@pytest.mark.parametrize('c,t', [(1,1),(2,2),(3,3),(None,2)])
+def test_yolo_prints_yolo_based_on_reverse_flag_respects_default(c,t):
+    if c:
+        cmd = f'python playground/yolo.py --reverse --count {c}'
+    else:
+        cmd = f'python playground/yolo.py -r'
+
+    output = subprocess.check_output(cmd, shell=True).decode()
+    assert output == 'oloy\n' * t
+
+@pytest.mark.parametrize('c,t', [(1,1),(2,2),(3,3),(None,2)])
+def test_yolo_prints_yolo_based_on_novowel_flag_respects_default(c,t):
+    if c:
+        cmd = f'python playground/yolo.py -nv --count {c}'
+    else:
+        cmd = f'python playground/yolo.py -nv'
+
+    output = subprocess.check_output(cmd, shell=True).decode()
+    assert output == 'yl\n' * t
+
+
+
+
+
